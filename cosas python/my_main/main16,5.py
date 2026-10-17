@@ -1,4 +1,4 @@
-# tablas nem cientifica y tecnica
+# Tablas NEM humanista y tecnica
 
 tabla_cientifica = {
     
@@ -611,7 +611,7 @@ tabla_tecnica = {
                 700:1000
   }
 
-# peticion de notas 
+# Petición de notas
 
 print("¡Bienvenido al sistema de promedios o ver tu NEM!")
 while True:
@@ -624,9 +624,12 @@ while True:
        
     if cantidad_notas < 3 or cantidad_notas > 8:
         print("Cantidad no válida, debe ser de 3 a 8.")
+    
     else:
         break
-# calculo de promedio    
+    
+# Calculo de promedio    
+
 notas = []
 
 for i in range(cantidad_notas):
@@ -638,6 +641,7 @@ for i in range(cantidad_notas):
          
          if nota < 20 or nota > 70 :
              print("Nota inválida. Por favor, ingresa una nota entre 20 y 70")
+         
          else:
              notas.append(nota)
              break
@@ -649,15 +653,21 @@ else:
     promedio = sum(notas) / len(notas)
     
     promediofinal = round(promedio / 10, 2) 
-  
-    # calcular el nem del usuario
     
     print(f"Tu promedio es: {promediofinal:.2f}")
+  
+    # Calcular el nem del usuario si la cantidad de notas es 4 
+    
+if cantidad_notas == 4:
+    print("puedes pasarla a NEM si gustas")  
     
     print("deseas calcular el NEM de tu promedio?")
+    print("El NEM (Nota de Ingreso a la Universidad) se calcula basado en tu promedio y el tipo de colegio que asististe.")
     
     while True:
+        
         respuesta = input("Ingresa 'sí' o 'no': ").strip().lower()
+        
         if respuesta in ("si", "sí", "no"):
             break
         print("use si o no para continuar, vuelva a intentar")
@@ -673,6 +683,8 @@ else:
         print("1. Científico Humanista")
         
         print("2. Técnico Profesional")
+
+      # Se calcula el NEM dependiendo de que tipo de colegio elegio el usuario
 
         while True:
             tipo_colegio = input("Ingresa el número correspondiente a tu tipo de colegio: ").strip()

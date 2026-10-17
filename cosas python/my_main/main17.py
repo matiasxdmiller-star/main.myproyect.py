@@ -1,4 +1,4 @@
-# calculadora basica muy basica que realiza operaciones de suma, resta, multiplicacion y division
+# Calculadora basica muy basica que realiza operaciones de suma, resta, multiplicacion y division
 
 print("bienvenido a mi calculadora")
 
